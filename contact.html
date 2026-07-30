@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Xiomara Wirodikromo</title>
+<meta name="description" content="Get in touch with Xiomara Wirodikromo.">
+<link rel="icon" href="./img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="./index.html" class="nav-brand">
+      <img src="./img/logo.png" alt="" class="nav-logo">
+      xiomara.w
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="./index.html">home</a></li>
+      <li><a href="./about.html">about</a></li>
+      <li><a href="./work.html">work</a></li>
+      <li><a href="./contact.html">contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: var(--space-3);">
+    <div class="container">
+      <h1>Let's talk</h1>
+      <p class="lede">Whether it's about school, a project, Cuddly's, or just
+        to say hi — I'd like to hear from you. Reach out directly, or use
+        the form.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container contact-grid">
+
+      <div class="reveal">
+        <h2 style="font-size:1.3rem;">Direct contact</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="label">email</span>
+            <a href="mailto:chayennewirodikromo@gmail.com">chayennewirodikromo@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">phone</span>
+            <a href="tel:+59786868191">+597 86868191</a>
+          </li>
+          <li>
+            <span class="label">location</span>
+            <span>Wanica, Suriname</span>
+          </li>
+          <li>
+            <span class="label">github</span>
+            <a href="https://github.com/WirodikromoX" target="_blank" rel="noopener">github.com/WirodikromoX</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2 style="font-size:1.3rem;">Send a message</h2>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xqerjnkv" method="POST" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <span class="error-msg"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <span class="error-msg"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            <span class="error-msg"></span>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </div>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Xiomara Wirodikromo</span>
+    <ul class="footer-links">
+      <li><a href="https://github.com/WirodikromoX" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/contact.js"></script>
+</body>
+</html>

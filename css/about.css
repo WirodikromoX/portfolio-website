@@ -1,0 +1,79 @@
+/* =========================================================
+   ABOUT.CSS — styles specific to about.html
+   Loaded after main.css.
+   ========================================================= */
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-5);
+}
+.about-portrait{
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--ink), #33455F);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9FB6AC;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: var(--space-2);
+}
+.about-portrait img{ width: 100%; height: 100%; object-fit: cover; }
+
+.interest-tags{
+  display: flex; flex-wrap: wrap; gap: 0.5em;
+  padding: 0; list-style: none; margin: var(--space-2) 0;
+}
+.interest-tags li{
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border: 1px dashed var(--line);
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+  color: var(--ink-soft);
+}
+
+.edu-item{
+  border-left: 2px solid var(--line);
+  padding-left: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.edu-item h3{ margin-bottom: 0.2em; }
+.edu-item .entry-meta{
+  display: block;
+  margin-bottom: 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.venture-card{
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.venture-logo{
+  width: 96px; height: 96px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+.venture-card p{ margin-bottom: 0.6em; }
+
+@media (max-width: 860px){
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-portrait{ aspect-ratio: 16/9; max-width: 260px; }
+}
+
+@media (max-width: 560px){
+  .venture-card{ flex-direction: column; align-items: center; text-align: center; }
+}

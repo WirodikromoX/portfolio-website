@@ -1,0 +1,66 @@
+/* =========================================================
+   CONTACT.CSS — styles specific to contact.html
+   Loaded after main.css.
+   ========================================================= */
+
+.contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+.contact-list{ list-style: none; margin: 0; padding: 0; }
+.contact-list li{
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+}
+.contact-list .label{
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  width: 90px;
+  flex-shrink: 0;
+  padding-top: 0.2em;
+}
+.contact-list a{ text-decoration: none; color: var(--ink); }
+.contact-list a:hover{ color: var(--signal); }
+
+form.contact-form{ display: flex; flex-direction: column; gap: var(--space-2); }
+.field{ display: flex; flex-direction: column; gap: 0.4em; }
+.field label{ font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+.field input, .field textarea{
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.8em 0.9em;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  resize: vertical;
+}
+.field input:invalid:not(:placeholder-shown),
+.field textarea:invalid:not(:placeholder-shown){
+  border-color: var(--flag);
+}
+.field .error-msg{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--flag);
+  min-height: 1em;
+}
+.form-status{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.8em 1em;
+  border-radius: var(--radius);
+  display: none;
+}
+.form-status.show{ display: block; }
+.form-status.ok{ background: var(--signal-soft); color: var(--signal); }
+.form-status.err{ background: var(--flag-soft); color: var(--flag); }
+
+@media (max-width: 860px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
