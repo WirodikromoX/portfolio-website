@@ -148,10 +148,6 @@ section{ padding: var(--space-5) 0; }
   padding: 0.3em 0;
   position: relative;
 }
-.nav-links a::before{
-  content: "~/";
-  color: var(--line);
-}
 .nav-links a:hover, .nav-links a[aria-current="page"]{
   color: var(--signal);
 }
@@ -274,9 +270,25 @@ section{ padding: var(--space-5) 0; }
   font-size: 0.8rem;
   color: var(--ink-soft);
 }
-.footer-links{ display: flex; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
-.footer-links a{ text-decoration: none; color: var(--ink-soft); }
-.footer-links a:hover{ color: var(--signal); }
+.footer-links{ display: flex; gap: var(--space-1); list-style: none; margin: 0; padding: 0; align-items: center; }
+.footer-links a{
+  text-decoration: none;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.footer-links a:hover{
+  color: var(--signal);
+  border-color: var(--signal);
+  background: var(--signal-soft);
+  transform: translateY(-2px);
+}
+.footer-links svg{ width: 17px; height: 17px; }
 
 /* ---------- 4) home page (index.html) ---------- */
 .hero{ padding: var(--space-6) 0 var(--space-5); }
